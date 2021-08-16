@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+<style>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:0.5;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: none;
+  padding-top: 50px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: yellow;
+  color: black;
+}
+
+.topnav-right {
+  float: right;
+}
+
+
+
+</style>
+<body>
+
+<div class="topnav">
+  <a class="active" >Show<b>trickr</b></a>
+  <a href="home.html">Home</a>
+  <a href="tvshowadd.html">Add</a>
+  <div class="topnav-right">
+    <a href="login.html">Login</a>
+    <a href="signup.html">signup</a>
+  </div>
+</div>
+
+<p><b>ADD TVshow</b></p>
+<hr size="1" color=lightgray noshade> 
+
+<div>
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Enter TV show name">
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <p><font color="green">Tv Show Name </font> has been added</p>
+      
+</div> 
+<script>
+ // Selector
+document.querySelector('form').addEventListener('submit', handleSubmitForm);
+
+function handleSubmitForm(e) {
+    e.preventDefault();
+
+
+    var input = document.querySelector('input');
+    if (input.value != ''){document.getElementById("demo").innerHTML = ( input.value + " has been added");}
+    else {document.getElementById("demo").innerHTML = "please Enter TV show name";}
+}
+</script>   
+
+</body>
+</html>
+

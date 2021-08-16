@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewpost" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.button1{
+  background-color: Blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button1:hover {
+  opacity: 0.8;
+}
+
+.button2{
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button2:hover {
+  opacity: 0.8;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: none;
+  padding-top: 50px;
+}
+
+.over {
+  background-color: #eee;
+  width: 300px;
+  height: 500px;
+  border: 1px solid;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: yellow;
+  color: black;
+}
+
+.topnav-right {
+  float: right;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" >Show<b>trickr</b></a>
+  <a href="home.html">Home</a>
+  <a href="tvshowadd.html">Add</a>
+  <div class="topnav-right">
+    <a href="login.html">Login</a>
+    <a href="signup.html">signup</a>
+  </div>
+</div>
+
+<center>
+<div class = "over" >
+<center> <h2 class = "model">Log in</h2> </center>
+		
+	<form>
+
+	<div class="container">
+    	<input type="text"  placeholder="@ Email" name="uname" required>
+
+    	<i class="fa fa-key icon"> <i> 
+    	<input type="password" placeholder="Password" name="psw" required>
+        
+    	<button type="submit">Login</button>
+   
+      	</div>
+  
+
+  	<div class="container" style="background-color:#f1f1f1">
+    	<center>
+    		<p><span> Forget your password? </span> </p>
+    	<span >Don't have an account yet? <a href="#">Singup</a></span>
+    	</center>
+    	</div>
+    	<button type="submit" class = "button1">f Sign in with Facebook</button>
+    
+    	<button type="submit" class = "button2">g+ Sign in with Google</button>
+   
+  </div>
+ </div>
+ </center>
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

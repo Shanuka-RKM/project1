@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+<style>t" 
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.button1 {
+  background-color: lightgray;
+  color: black;
+  padding: 0.5px 0.5px;
+}
+
+.alink{ background-color: Gainsboro;
+  text-align: center; 
+  height: 150px; 
+  padding-top: 50px;
+}
+
+.impic {
+  background-color: #eee;
+  width: 75%;
+  height: 390px;
+  border: 1px dotted black;
+  padding-left: 60px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-left: 12%;
+}
+
+.top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+  margin-right: 110px;
+  padding: 5px;
+}
+
+.filter{
+  float: left;
+  padding: 0;
+  width: 200px;
+  line-height: 5px;
+  text-align: center;
+  margin: 6px;
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: yellow;
+  color: black;
+}
+
+.topnav-right {
+  float: right;
+}
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" >Show<b>trickr</b></a>
+  <a href="home.html">Home</a>
+  <a href="tvshowadd.html">Add</a>
+  <div class="topnav-right">
+    <a href="login.html">Login</a>
+    <a href="signup.html">signup</a>
+  </div>
+</div>
+<center>
+
+<div class="nav-cont-sortby cat-some-first">
+          <x class= 'button1' onclick="filterSelection('num')">0-9</x>
+          <x class= 'button1' onclick="filterSelection('a')">A</x>
+          <x class= 'button1' onclick="filterSelection('b')">B</x>
+          <x class= 'button1' onclick="filterSelection('c')">C</x>
+          <x class= 'button1' onclick="filterSelection('d')">D</x>
+          <x class= 'button1' onclick="filterSelection('e')">E</x>
+          <x class= 'button1' onclick="filterSelection('f')">F</x>
+          <x class= 'button1' onclick="filterSelection('g')">G</x>
+          <x class= 'button1' onclick="filterSelection('h')">H</x>
+          <x class= 'button1' onclick="filterSelection('i')">I</x>
+          <x class= 'button1' onclick="filterSelection('j')">J</x>
+          <x class= 'button1' onclick="filterSelection('k')">K</x>
+          <x class= 'button1' onclick="filterSelection('l')">L</x>
+          <x class= 'button1' onclick="filterSelection('m')">M</x>
+          <x class= 'button1' onclick="filterSelection('n')">N</x>
+          <x class= 'button1' onclick="filterSelection('o')">O</x>
+          <x class= 'button1' onclick="filterSelection('p')">P</x>
+          <x class= 'button1' onclick="filterSelection('q')">Q</x>
+          <x class= 'button1' onclick="filterSelection('r')">R</x>
+          <x class= 'button1' onclick="filterSelection('s')">S</x>
+          <x class= 'button1' onclick="filterSelection('t')">T</x>
+          <x class= 'button1' onclick="filterSelection('u')">U</x>
+          <x class= 'button1' onclick="filterSelection('v')">V</x>
+          <x class= 'button1' onclick="filterSelection('w')">W</x>
+          <x class= 'button1' onclick="filterSelection('x')">X</x>
+          <x class= 'button1' onclick="filterSelection('y')">Y</x>
+          <x class= 'button1' onclick="filterSelection('z')">Z</x>
+<br>
+</center>
+	<center>
+	<div id = "mybtncontainer">
+		<button class ="btn active" onclick= "filterSelection('all')"> Show all </button>
+		<button class ="btn active" onclick= "filterSelection('Action')"> Action </button>
+		<button class ="btn active" onclick= "filterSelection('Adventure')"> Adventure </button>
+		<button class ="btn active" onclick= "filterSelection('Animation')"> Animation </button>
+		<button class ="btn active" onclick= "filterSelection('Children')"> Children </button>
+		<button class ="btn active" onclick= "filterSelection('Comedy')"> Comedy </button>
+		<button class ="btn active" onclick= "filterSelection('Crime')"> Crime </button>
+		
+		
+		<button class ="btn active" onclick= "filterSelection('Documentary')"> Documentary</button>
+		<button class ="btn active" onclick= "filterSelection('Drama')"> Drama </button>
+		<button class ="btn active" onclick= "filterSelection('Family')"> Family </button>
+		<button class ="btn active" onclick= "filterSelection('Fantasy')"> Fantasy </button>
+		<button class ="btn active" onclick= "filterSelection('Food')"> Food </button>
+		<button class ="btn active" onclick= "filterSelection('Home and Garden')">  Home and Garden</button>
+		<button class ="btn active" onclick= "filterSelection('Horror')"> Horror </button>
+		<br>
+		<button class ="btn active" onclick= "filterSelection('Mini Service')"> Mini Service</button>
+		<button class ="btn active" onclick= "filterSelection('My sefry')"> My sefry</button>
+		<button class ="btn active" onclick= "filterSelection('News')"> News</button>
+		<button class ="btn active" onclick= "filterSelection('Reality')"> Reality</button>
+		<button class ="btn active" onclick= "filterSelection('Romance')"> Romance</button>
+		<button class ="btn active" onclick= "filterSelection('Scl-fi')"> Scl-fi</button>
+		<button class ="btn active" onclick= "filterSelection('Sport')"> Sport</button>
+		<button class ="btn active" onclick= "filterSelection('Suspense')"> Suspence</button>
+		<button class ="btn active" onclick= "filterSelection('Talk Show')"> Talk Show</button>
+		<button class ="btn active" onclick= "filterSelection('Travel')"> Travel</button>
+	</center>
+	
+	<br>
+
+<div class="impic">
+  <div class="top">TOP 12 SHOWS</div>
+<div class="row">
+  <div class="filter">
+<div class="column">
+<div class="card">
+<a href="pic1.html"><img class="img" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fgame&psig=AOvVaw14ZIUZHzCTnj84Y-8IYIIU&ust=1629198626279000&source=images&cd=vfe&ved=2ahUKEwil3K_8s7XyAhVem0sFHRqSAeUQr4kDegUIARCvAQ" alt="pic1" ></a><br>
+
+    <h6>pic1</h6>
+    <p class="title">Episode 01</p>
+
+  </div>
+</div>
+</div>
+<div class="filter" >
+<div class="column">
+<div class="card">
+  <a href="pic2.html"><img class="img" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fcomputer-games&psig=AOvVaw14ZIUZHzCTnj84Y-8IYIIU&ust=1629198626279000&source=images&cd=vfe&ved=2ahUKEwil3K_8s7XyAhVem0sFHRqSAeUQr4kDegUIARC5AQ" alt="pic2" >
+  </a>
+    <h6>pic2</h6>
+    <p class="title">Episode 02</p>
+
+
+  </div>
+</div>
+</div>
+<div class="filter">
+<div class="column">
+<div class="card">
+  <a href="pic3.html"><img class="img" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hp.com%2Fus-en%2Fshop%2Ftech-takes%2Fvideo-game-genres&psig=AOvVaw14ZIUZHzCTnj84Y-8IYIIU&ust=1629198626279000&source=images&cd=vfe&ved=2ahUKEwil3K_8s7XyAhVem0sFHRqSAeUQr4kDegUIARC7AQ" alt="pic3">
+
+    <h6>pic3</h6>
+    <p class="title">Episode 03</p>
+
+
+
+
+
+  </div>
+</div>
+</div>
+<div class="filter">
+<div class="column">
+<div class="card">
+<a href="#"><img class="img" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fgaming&psig=AOvVaw14ZIUZHzCTnj84Y-8IYIIU&ust=1629198626279000&source=images&cd=vfe&ved=2ahUKEwil3K_8s7XyAhVem0sFHRqSAeUQr4kDegUIARC9AQ" alt="pic4" >
+
+    <h6>pic4</h6>
+    <p class="title">Episode 04</p>
+
+
+  </div>
+</div>
+</div>
+<div class="filter">
+<div class="column">
+<div class="card">
+  <a href="#"><img class="img" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.game.co.uk%2F&psig=AOvVaw14ZIUZHzCTnj84Y-8IYIIU&ust=1629198626279000&source=images&cd=vfe&ved=2ahUKEwil3K_8s7XyAhVem0sFHRqSAeUQr4kDegUIARDBAQ" alt="pic7" >
+  </a>
+    <h6>pic6</h6>
+    <p class="title">Episode 06</p>
+
+
+  </div>
+</div>
+</div>
+<div class="filter">
+<div class="column">
+<div class="card">
+<a href="#"><img class="img" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fgames&psig=AOvVaw14ZIUZHzCTnj84Y-8IYIIU&ust=1629198626279000&source=images&cd=vfe&ved=2ahUKEwil3K_8s7XyAhVem0sFHRqSAeUQr4kDegUIARD1AQ" alt="pic7" >
+</a>
+    <h6>pic7</h6>
+    <p class="title">Episode 07</p>
+
+
+  </div>
+</div>
+</div>
+
+<div class="filter">
+<div class="column">
+<div class="card">
+<a href="#"><img class="img" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bbc.co.uk%2Fnews%2Fnewsbeat-52697358&psig=AOvVaw14ZIUZHzCTnj84Y-8IYIIU&ust=1629198626279000&source=images&cd=vfe&ved=2ahUKEwil3K_8s7XyAhVem0sFHRqSAeUQr4kDegUIARCAAg" alt="pic8" >
+  </a>
+    <h6>pic8</h6>
+    <p class="title">Episode 08</p>
+
+
+  </div>
+</div>
+</div>
+
+<div class="filter">
+<div class="column">
+<div class="card">
+<a href="#"><img class="img" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fgaming&psig=AOvVaw14ZIUZHzCTnj84Y-8IYIIU&ust=1629198626279000&source=images&cd=vfe&ved=2ahUKEwil3K_8s7XyAhVem0sFHRqSAeUQr4kDegQIARA3" alt="pic9" >
+  </a>
+    <h6>pic9</h6>
+    <p class="title">Episode 09</p>
+
+
+  </div>
+</div>
+</div>
+
+<div class="filter">
+<div class="column">
+<div class="card">
+  <a href="#"><img class="img" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fgames%2F&psig=AOvVaw14ZIUZHzCTnj84Y-8IYIIU&ust=1629198626279000&source=images&cd=vfe&ved=2ahUKEwil3K_8s7XyAhVem0sFHRqSAeUQr4kDegQIARA5" alt="pic10" >
+  </a>
+    <h6>pic10</h6>
+    <p class="title">Episode 10</p>
+
+
+  </div>
+</div>
+</div>
+
+<div class="filter">
+<div class="column">
+<div class="card">
+  <a href="#"><img class="img" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.microsoft.com%2Fen-us%2Fstore%2Fgames%2Fwindows&psig=AOvVaw14ZIUZHzCTnj84Y-8IYIIU&ust=1629198626279000&source=images&cd=vfe&ved=2ahUKEwil3K_8s7XyAhVem0sFHRqSAeUQr4kDegQIARBQ" alt="pic11" >
+  </a>
+    <h6>pic11</h6>
+    <p class="title">Episode 11</p>
+
+
+  </div>
+</div>
+</div>
+
+<div class="filter">
+<div class="column">
+<div class="card">
+  <a href="#"><img class="img" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cnet.com%2Fpictures%2Fthe-best-nintendo-switch-games-to-play-in-2021%2F&psig=AOvVaw14ZIUZHzCTnj84Y-8IYIIU&ust=1629198626279000&source=images&cd=vfe&ved=2ahUKEwil3K_8s7XyAhVem0sFHRqSAeUQr4kDegQIARBX" alt="pic12" >
+  </a>
+    <h6>pic12</h6>
+    <p class="title">Episode 12</p>
+
+
+  </div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+  
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
